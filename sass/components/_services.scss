@@ -1,0 +1,46 @@
+.services{
+    @extend %section;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+.services__tittle{
+    @extend %m-p;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.17;
+    color: $title-text-color;
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+.services-list{
+    display: flex;
+    @extend %ul;
+}
+.services-list__item{
+    margin-right: 30px;
+    position: relative;
+
+        &:last-child{
+            margin-right: 0px;
+        }
+}
+.services-list__title{
+    @extend %flex;
+    position: absolute;
+    @extend %m-p;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+
+    background-color: rgba(47, 48, 58, 0.8);
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1,14;
+    text-transform: uppercase;
+    color: $backgraund-color-general;
+}

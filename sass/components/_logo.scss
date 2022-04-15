@@ -1,0 +1,23 @@
+.logo {
+    font-family: $logo-font-style;
+    font-weight: bold;
+    font-size: 24px;
+    color: $title-text-color;
+    line-height: 1.166;
+    text-decoration:none;
+
+    display: flex;
+}
+.logo__web {
+    color: $web-color;
+}
+.footer-logo{
+    font-family: $logo-font-style;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.19;
+    color: $backgraund-color-general;
+    text-decoration:none;
+
+    display: block;
+}

@@ -1,0 +1,240 @@
+.backdrop{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: scroll;
+
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    
+}
+
+.backdrop--is-hidden{
+    opacity: 0;
+    pointer-events: none;
+        .modal{
+    transform: translate(-50%, -50%) scale(0);
+                }
+}
+
+.modal{
+    position: absolute;
+    min-width: 528px;
+    height: 581px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 500ms ease-in-out;
+
+    background-color: $backgraund-color-general;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 39px 40px 41px;
+}
+
+.modal-agreement__title{
+    @extend %m-p;
+    margin-bottom: 12px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+
+    color: $title-text-color;
+}
+.modal-agreement__label{
+    display: flex;
+    flex-direction: column;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $main-text-color;
+}
+
+.modal-agreement__input{
+    padding-left: 42px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+   
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+
+    cursor: pointer;
+
+    transition: border $transition;
+        &:focus {
+            border-color: $web-color;
+        }
+}
+
+.comment-textarea:focus{
+    border-color: $web-color;
+}
+.modal-agreement__input:focus ~ .modal-agreement__img{
+    fill: $web-color;
+}
+.modal-agreement__comment{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: $main-text-color;
+
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+.modal-agreement__list{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: $main-text-color;
+    @extend  %ul;
+}
+
+textarea{
+     resize: none;
+}
+
+.comment-textarea{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+}
+
+.modal-agreement__item{
+    position: relative;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+        .modal-agreement__img{
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+}
+}
+
+.modal-agreement__label-title{
+    padding: 4px;
+}
+
+.modal-agreement__textarea{
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+    outline: none;
+
+    transition: border $transition;
+}
+.agreement-follow{
+    display: flex;
+}
+.follow-checkbox{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    align-items: center;
+    text-align: center;
+
+    color: $main-text-color;
+
+    margin-bottom: 30px;
+}
+.follow-checkbox__input{
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
+}
+.follow-checkbox__img{
+    padding: 0;
+    display: inline-flex;
+    border: 2px solid $title-text-color;
+    border-radius: 2px;
+    background-color: $backgraund-color-general;
+    color: $backgraund-color-general;
+    fill: currentColor;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: border $transition, background-color $transition;
+}
+.follow-checkbox__input:checked + .follow-checkbox__img{
+    background-color: $web-color;
+    border: 2px solid $web-color;
+}
+.modal-agreement__button{
+    display: block;
+    background-color: $web-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color $transition;
+
+        &{
+            background-color: #188CE8;
+        }
+}
+
+.follow-checkbox__terms{
+    color: $web-color;
+    
+}
+.modal-btn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+.modal-btn:hover{
+    fill: $web-color;
+}

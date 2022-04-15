@@ -1,0 +1,110 @@
+.team{
+   @extend %section;
+    background-color: $secondary-backgraund-color;
+}
+
+.team__tittle{
+    @extend %m-p;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1.178;
+    color: $title-text-color;
+    text-align: center;
+
+    @media screen and (min-width: 1200px){
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+    }
+}
+
+.team-list{
+    @extend %ul;
+    @media screen and (min-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1200px){
+        flex-wrap: nowrap;
+}
+}
+.team-item{
+    background-color: $backgraund-color-general;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    width: 100%;
+    margin-top: 30px;
+     
+    @media screen and (min-width: 768px){
+        max-width: 354px;
+        &:nth-child(2n+1){
+            margin-right: 30px;
+        }
+    }
+
+    @media screen and (min-width: 1200px){
+        margin-right: 30px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+.team-item__photo{
+    width: 100%
+}
+.team-employee__tittle{
+    @extend %m-p;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.16;
+    color: $title-text-color;
+    text-align: center;
+    margin-top: 30px;
+}
+.team-employee__profession{
+    @extend %m-p;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    margin-top: 10px;
+}
+.employee-contact{
+    display: flex;
+    justify-content: center;
+    @extend %ul;
+    margin-top: 16px;
+    padding-bottom: 24px;
+}
+.employee-contact__item{
+    margin-right: 10px;
+        &:last-child{
+            margin-right: 0px;
+        }
+}
+.employee-contact__link{
+    display: block;
+    text-decoration: none;
+    width: 44px;
+    height: 44px;
+    background-color: $backgraund-color-general;
+    color: $link;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+
+    transition: color $transition, background-color $transition;
+
+            &:hover, &:focus{
+                background-color: $web-color;
+                color: $backgraund-color-general;
+                }
+}
+
+.employee-contact__img {
+    fill: currentColor;
+}

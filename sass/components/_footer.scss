@@ -1,0 +1,194 @@
+/*блок с контактами*/
+.footer{
+    background-color: $footer-color;
+    color: #FFFFFF;
+}
+.footer-section{
+    text-align: center;
+    @media screen and (max-width: 1199px){
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px){
+        display: flex;
+        align-items: center;
+    }
+}
+.footer-section-tablet{
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+.footer-logo{
+    font-family: Raleway, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.19;
+    color: #FFFFFF;
+    text-decoration:none;
+
+    display: block;
+}
+
+.footer-contact{
+    @media screen and (min-width: 1200px){
+        text-align: start;
+    }
+}
+.footer-contact__address{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+
+    margin-top: 20px;
+}
+
+.footer-contact__contacts{
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration:none;
+     display: block;
+
+     margin-top: 8px;
+}
+/*блок с соц-сетями*/
+.footer-connect{
+    @extend %section;
+
+    @media screen and (min-width: 768px){
+        margin-left: 165px;
+    }
+    @media screen and (min-width: 1200px){
+        margin-left: 70px;
+    }
+}
+
+.footer-connect__tittle{
+    @extend %m-p;
+    font-size: 14px;
+    line-height: 1,14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.footer-connect-list{
+    @extend %ul;
+    display: flex;
+    justify-content: center;
+}
+.footer-connect-list__item{
+    margin-right: 10px;
+        &:last-child{
+            margin-right: 0px;
+        }
+}
+.footer-connect-list__link{
+    display: block;
+    text-decoration: none;
+    color: $backgraund-color-general;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+
+    transition: background-color $transition;
+            &:hover, &:focus{
+                background-color: $web-color;
+            }
+}
+.footer-connect-list__img{
+    fill: currentColor;
+}
+/*подписка на рассылку*/
+.footer-subscription{
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+        margin-top: 60px;
+    }
+    @media screen and (min-width: 1200px){
+        margin-left: 93px;
+    }
+}
+
+.footer-subscription__title{
+    @extend %m-p;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+.footer-subscription-form{
+    text-align: center;
+    margin-top: 20px;
+
+    @media screen and (min-width: 1200px){
+        display: flex;
+    }
+}
+.footer-subscription__input{
+    color: #fff;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+
+    padding: 15px 16px;
+        &::placeholder{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 1.25; 
+        
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px){
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media screen and (min-width: 1200px) {
+            min-width: 358px;
+            max-height: 50px;
+        }
+}
+.footer-subscription__button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    min-width: 200px;
+    min-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+
+    @media screen and (min-width: 768px){
+        margin-top: 20px;
+    }
+    @media screen and (min-width: 1200px){
+        margin-top: 0;
+        margin-left: 12px;
+    }
+
+    background-color: $web-color;
+    color: $backgraund-color-general;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.footer-subscription__img{
+    margin-left: 10px;
+    display: inline-flex;
+}
