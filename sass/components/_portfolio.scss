@@ -72,7 +72,9 @@
 }
 
 .portfolio-list__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     text-decoration:none;
     cursor: pointer;
     background-color: $backgraund-color-general;
@@ -86,6 +88,7 @@
     transform: translateY(0);
 }
 .portfolio-list__content{
+    flex-grow: 1;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
