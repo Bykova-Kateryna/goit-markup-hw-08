@@ -946,6 +946,12 @@ textarea {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .services {
+    padding-top: 0;
+  }
+}
+
 .services__tittle {
   font-weight: bold;
   font-size: 36px;
