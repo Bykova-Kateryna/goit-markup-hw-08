@@ -5,14 +5,14 @@
 
 .team__tittle{
     @extend %m-p;
-    font-weight: bold;
+    font-style: normal;
+    font-weight: 700;
     font-size: 28px;
-    line-height: 1.178;
+    line-height: 1.18;
     color: $title-text-color;
     text-align: center;
 
     @media screen and (min-width: 1200px){
-        font-weight: 700;
         font-size: 36px;
         line-height: 1.17;
     }
@@ -58,11 +58,12 @@
     @extend %m-p;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.16;
+    line-height: 1.19;
     color: $title-text-color;
     text-align: center;
     margin-top: 30px;
 }
+
 .team-employee__profession{
     @extend %m-p;
     font-weight: normal;
@@ -71,6 +72,7 @@
     text-align: center;
     margin-top: 10px;
 }
+
 .employee-contact{
     display: flex;
     justify-content: center;

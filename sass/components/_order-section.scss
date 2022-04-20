@@ -1,7 +1,7 @@
 .order-section {
     background-color: $footer-color;
     text-align: center;
-   
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 118px;
@@ -42,6 +42,8 @@
         }
 
         @media screen and (min-width: 1200px){
+            padding-top: 200px;
+            padding-bottom: 200px;
             background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/backgraund-desktop.jpg');
             background-position: center;
             background-size: cover;
@@ -61,16 +63,11 @@
 }
 
 .order-section__title {
-    @media screen and (min-width: 768px){
-        font-size: 26px;
-        line-height: 1.61;
-        max-width: 360px;
-        padding-top: 118px;
-    }
-
     @extend %m-p;
     color: $backgraund-color-general;
     font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
@@ -78,6 +75,14 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+        max-width: 360px;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 1.36;
+        max-width: 696px;
+    }
 }
 
 .order-section__button {
@@ -101,8 +106,5 @@
 
     &:hover, &:focus{
         background-color: $button-hover;
-    }
-    @media screen and (min-width: 768px){
-        margin-bottom: 118px;
     }
 }

@@ -47,52 +47,32 @@
 }
 
 /*опции(список) портфолио*/
-.portfolio-list__link{
-    background-color: $backgraund-color-general;
-    display: block;
-}
 
 .portfolio-list{
     @extend %ul;
     display: flex;
-    flex-wrap: wrap;
-}
-@media screen and (min-width: 1200px){
-    .portfolio-list__item{
-        margin-right: 30px;
-        margin-bottom: 30px;
-            &:nth-child(3n+3){
-                margin-right: 0px;
-            }
-            &:nth-last-child(-n+3){
-                margin-bottom: 0px;
-            }
+    margin: -15px;
+    @media screen and (max-width: 767px){
+        flex-direction: column;
+    }
+    @media screen and (min-width: 768px){
+        flex-wrap: wrap;
     }
 }
 .portfolio-list__item{
-    @media screen and (max-width: 767px){
-        width: 100%;
-        &:not(:last-child){
-            margin-bottom: 30px;
-        }
-    }
+    margin: 15px;
 
-    @media screen and (min-width: 768px){
-        max-width: 354px;
-        max-height: 404px;
-        &:nth-child(-n+2){
-            max-height: 440px;
-        }
-        &:nth-child(2n+1){
-            margin-right: 30px;
-        }
-        &:not(:last-child){
-            margin-bottom: 30px;
-        }
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+        flex-basis: calc((100% - 4 * 15px) / 2);
+    }
+    @media screen and (min-width: 1200px){
+        flex-basis: calc((100% - 6 * 15px) / 3);
+        
     }
 }
 
 .portfolio-list__link {
+    display: block;
     text-decoration:none;
     cursor: pointer;
     background-color: $backgraund-color-general;
@@ -111,21 +91,13 @@
     border-bottom: 1px solid #EEEEEE;
 
     padding: 20px 24px 20px 24px;
+ 
+}
 
-    @media screen and (min-width: 768px){
-            &:nth-child(n+1){
-                min-height: 146px;
-            }
-    }    
-}
-.portfolio-list__img{
-    display: block;
-    width: 100%
-}
 .portfolio-list__title{
     @extend %m-p;
     color: $title-text-color;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -133,7 +105,7 @@
 .portfolio-list__text{
     @extend %m-p;
     color: $main-text-color;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.88;
 
@@ -162,4 +134,8 @@
 
     background: rgba(33, 150, 243, 0.9);
     color: #FFFFFF;
+    @media screen and (max-width: 400px) {
+        font-size: 12px;
+        line-height: 1.56;
+    }
 }

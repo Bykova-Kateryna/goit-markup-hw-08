@@ -71,6 +71,9 @@
     line-height: 1,14;
     text-transform: uppercase;
     margin-bottom: 20px;
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+    }
 }
 .footer-connect-list{
     @extend %ul;
@@ -120,6 +123,9 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+    }
 }
 .footer-subscription-form{
     text-align: center;
