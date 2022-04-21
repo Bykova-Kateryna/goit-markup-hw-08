@@ -161,18 +161,6 @@ img, picture {
   }
 }
 
-@media screen and (max-width: 479px) {
-  .header-nav-menu {
-    margin-bottom: 150px;
-  }
-}
-
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .header-nav-menu {
-    margin-bottom: 302px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .header-nav-menu {
     display: -webkit-box;
@@ -266,15 +254,29 @@ img, picture {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .header-mobile-menu-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 479px) {
   .header-contact {
     margin-bottom: 20px;
+    margin-top: 250px;
   }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .header-contact {
     margin-bottom: 64px;
+    margin-top: 306px;
   }
 }
 
@@ -404,6 +406,7 @@ img, picture {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 64px;
 }
 
 @media screen and (min-width: 768px) {
@@ -416,7 +419,6 @@ img, picture {
   .header-menu-link {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-top: 60px;
   }
 }
 
@@ -591,6 +593,12 @@ img, picture {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 479px) {
+  .backdrop {
+    padding: 30px 15px;
+  }
+}
+
 .backdrop--is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -603,11 +611,6 @@ img, picture {
 
 .modal {
   padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
   -webkit-transition: -webkit-transform 500ms ease-in-out;
   transition: -webkit-transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out;
@@ -617,6 +620,16 @@ img, picture {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px 39px 40px 41px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 @media screen and (max-width: 767px) {
