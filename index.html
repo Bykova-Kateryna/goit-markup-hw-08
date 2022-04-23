@@ -17,13 +17,18 @@
     <header class="header">
     <div class="header-section conteiner">
                 <a class="logo" href="./index.html"><span class="logo__web">Web</span>Studio</a>
-                <button class="menu-button" type="button" aria-expanded="false" data-menu-button>
-                    <svg class="menu-button__img" width="24" height="16" aria-label="переключатель мобильного меню" aria-controls="header-mobile-menu">
+                <button class="menu-button" type="button" data-menu-open>
+                    <svg class="menu-button__img" width="24" height="16">
                         <use class="menu-button__img--open" href="./images/icons.svg#menu"></use>
-                        <use class="menu-button__img--close" href="./images/icons.svg#close-menu"></use>
                     </svg>
                 </button>
-                <div class="header-mobile-menu" id="header-mobile-menu" data-menu>
+                <div class="header-mobile-menu conteiner" id="header-mobile-menu" data-menu>
+                    <div class="header-mobile-menu-nav">
+                    <button class="menu-button menu-button__close" type="button" data-menu-close>
+                        <svg class="menu-button__img" width="24" height="16">
+                            <use class="menu-button__img--close" href="./images/icons.svg#close-menu"></use>
+                        </svg>
+                    </button>
                 <nav class="header-nav-menu">
                     <ul class="site-nav-list">
                         <li class="site-nav-list__item"><a class="site-nav-list__link site-nav-list__link--current" href="./index.html">Студия</a></li>
@@ -31,6 +36,8 @@
                         <li class="site-nav-list__item"><a class="site-nav-list__link" href="">Контакты</a></li>
                     </ul>
                 </nav>
+                </div>
+                <div class="header-mobile-menu-contact">
                     <ul class="header-contact">
                         <li class="header-contact__item"><a class="header-contact__link header-contact__link-mail" href="mailto:info@devstudio.com"> <svg class="header-contact__img" width="16" height="12"><use href="images/icons.svg#mail"></use></svg>info@devstudio.com</a></li>
                         <li class="header-contact__item"><a class="header-contact__link header-contact__link-tell" href="tel:+380961111111"><svg class="header-contact__img" width="10" height="16"><use href="images/icons.svg#Tell"></use></svg>+38 096 111 11 11</a></li>
@@ -41,6 +48,7 @@
                         <li class="header-menu-link__item"><a class="header-menu-link_href" href="#">Facebook</a></li>
                         <li class="header-menu-link__item"><a class="header-menu-link_href" href="#">LinkedIn</a></li>
                     </ul>
+                </div>
                 </div>
     </div>
     </header>
@@ -102,15 +110,30 @@
         <h2 class="services__tittle">Чем мы занимаемся</h2>
             <ul class="services-list">
                 <li class="services-list__item">
-                    <img srcset="./images/what-we-do1.jpg 1x, ./images/what-we-do1@2x.jpg 2x" src="./images/what-we-do1.jpg" alt="работаем в VS CODE">
+                    <picture>
+                        <source srcset="./images/what-we-do1.webp 1x, ./images/what-we-do1@2x.webp 2x" type="image/webp">
+                        <source srcset="./images/what-we-do1.jpg 1x, ./images/what-we-do1@2x.jpg 2x">
+                        <img src="./images/what-we-do1.jpg" alt="работаем в VS CODE">
+                    </picture>
+                    
                     <p class="services-list__title">Десктопные приложения</p>
                 </li>
                 <li class="services-list__item">
-                    <img srcset="./images/what-we-do2.jpg 1x, ./images/what-we-do2@2x.jpg 2x" src="./images/what-we-do2.jpg" alt="пишем программы на телефон">
+                    <picture>
+                        <source srcset="./images/what-we-do2.webp 1x, ./images/what-we-do2@2x.webp 2x" type="image/webp">
+                        <source srcset="./images/what-we-do2.jpg 1x, ./images/what-we-do2@2x.jpg 2x">
+                        <img src="./images/what-we-do2.jpg" alt="пишем программы на телефон">
+                    </picture>
+                    
                     <p class="services-list__title">Мобильные приложения</p>
                 </li>
                 <li class="services-list__item">
-                    <img srcset="./images/what-we-do3.jpg 1x, ./images/what-we-do3@2x.jpg 2x" src="./images/what-we-do3.jpg" alt="дизайн">
+                    <picture>
+                        <source srcset="./images/what-we-do3.webp 1x, ./images/what-we-do3@2x.webp 2x" type="image/webp">
+                        <source srcset="./images/what-we-do3.jpg 1x, ./images/what-we-do3@2x.jpg 2x">
+                        <img src="./images/what-we-do3.jpg" alt="дизайн">
+                    </picture>
+                    
                     <p class="services-list__title">Дизайнерские решения</p>
                 </li>
             </ul>
@@ -123,9 +146,12 @@
         <ul class="team-list">  
             <li class="team-item">
                 <picture>
-                    <source srcset="./images/Igor-Demianenko_450_mobile.jpg 1x, ./images/Igor-Demianenko_450_mobile@2x.jpg 2x" media="(max-width: 767px)">
-                    <source srcset="./images/Igor-Demianenko_354_tablet.jpg 1x, ./images/Igor-Demianenko_354_tablet@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Igor-Demianenko_270_desktop.webp 1x, ./images/Igor-Demianenko_270_desktop@2x.webp 2x" type="image/webp" media="(min-width: 1200px)">
                     <source srcset="./images/Igor-Demianenko_270_desktop.jpg 1x, ./images/Igor-Demianenko_270_desktop@2x.jpg 2x" media="(min-width: 1200px)">
+                    <source srcset="./images/Igor-Demianenko_354_tablet.webp 1x, ./images/Igor-Demianenko_354_tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Igor-Demianenko_354_tablet.jpg 1x, ./images/Igor-Demianenko_354_tablet@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Igor-Demianenko_450_mobile.webp 1x, ./images/Igor-Demianenko_450_mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+                    <source srcset="./images/Igor-Demianenko_450_mobile.jpg 1x, ./images/Igor-Demianenko_450_mobile@2x.jpg 2x" media="(max-width: 767px)">
                     <img class="team-item__photo" src="./images/Igor-Demianenko_354_tablet.jpg" alt="Игорь Демьяненко">
                 </picture>
                 
@@ -142,9 +168,12 @@
             </li>
             <li class="team-item">
                 <picture>
-                    <source srcset="./images/Olga-Repina_450_mobile.jpg 1x, ./images/Olga-Repina_450_mobile@2x.jpg 2x" media="(max-width: 767px)">
-                    <source srcset="./images/Olga-Repina_354_tablet.jpg 1x, ./images/Olga-Repina_354_tablet@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Olga-Repina_270_desktop.webp 1x, ./images/Olga-Repina_270_desktop@2x.webp 2x" type="image/webp" media="(min-width: 1200px)">
                     <source srcset="./images/Olga-Repina_270_desktop.jpg 1x, ./images/Olga-Repina_270_desktop@2x.jpg 2x" media="(min-width: 1200px)">
+                    <source srcset="./images/Olga-Repina_354_tablet.webp 1x, ./images/Olga-Repina_354_tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Olga-Repina_354_tablet.jpg 1x, ./images/Olga-Repina_354_tablet@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Olga-Repina_450_mobile.webp 1x, ./images/Olga-Repina_450_mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+                    <source srcset="./images/Olga-Repina_450_mobile.jpg 1x, ./images/Olga-Repina_450_mobile@2x.jpg 2x" media="(max-width: 767px)">
                     <img class="team-item__photo" src="./images/Olga-Repina_354_tablet.jpg" alt="Ольга Репина">
                 </picture>
                 
@@ -161,9 +190,12 @@
             </li>
             <li class="team-item">
                 <picture>
-                    <source srcset="./images/Nikolai-Tarasov_450_mobile.jpg 1x, ./images/Nikolai-Tarasov_450_mobile@2x.jpg 2x" media="(max-width: 767px)">
-                    <source srcset="./images/Nikolai-Tarasov_354_tablet.jpg 1x, ./images/Nikolai-Tarasov_354_tablet@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Nikolai-Tarasov_270_desktop.webp 1x, ./images/Nikolai-Tarasov_270_desktop@2x.webp 2x" type="image/webp" media="(min-width: 1200px)">
                     <source srcset="./images/Nikolai-Tarasov_270_desktop.jpg 1x, ./images/Nikolai-Tarasov_270_desktop@2x.jpg 2x" media="(min-width: 1200px)">
+                    <source srcset="./images/Nikolai-Tarasov_354_tablet.webp 1x, ./images/Nikolai-Tarasov_354_tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Nikolai-Tarasov_354_tablet.jpg 1x, ./images/Nikolai-Tarasov_354_tablet@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Nikolai-Tarasov_450_mobile.webp 1x, ./images/Nikolai-Tarasov_450_mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+                    <source srcset="./images/Nikolai-Tarasov_450_mobile.jpg 1x, ./images/Nikolai-Tarasov_450_mobile@2x.jpg 2x" media="(max-width: 767px)">
                     <img class="team-item__photo" src="./images/Nikolai-Tarasov_354_tablet.jpg" alt="Николай Тарасов">
                 </picture>
                 
@@ -180,9 +212,12 @@
             </li>
             <li class="team-item">
                 <picture>
-                    <source srcset="./images/Mikhail-Ermakov_450_mobile.jpg 1x, ./images/Mikhail-Ermakov_450_mobile@2x.jpg 2x" media="(max-width: 767px)">
-                    <source srcset="./images/Mikhail-Ermakov_354_tablet.jpg 1x, ./images/Mikhail-Ermakov_354_tablet@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Mikhail-Ermakov_270_desktop.webp 1x, ./images/Mikhail-Ermakov_270_desktop@2x.webp 2x" type="image/webp" media="(min-width: 1200px)">
                     <source srcset="./images/Mikhail-Ermakov_270_desktop.jpg 1x, ./images/Mikhail-Ermakov_270_desktop@2x.jpg 2x" media="(min-width: 1200px)">
+                    <source srcset="./images/Mikhail-Ermakov_354_tablet.webp 1x, ./images/Mikhail-Ermakov_354_tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Mikhail-Ermakov_354_tablet.jpg 1x, ./images/Mikhail-Ermakov_354_tablet@2x.jpg 2x" media="(min-width: 768px) and (max-width: 1199px)">
+                    <source srcset="./images/Mikhail-Ermakov_450_mobile.webp 1x, ./images/Mikhail-Ermakov_450_mobile@2x.webp 2x" type="image/webp" media="(max-width: 767px)">
+                    <source srcset="./images/Mikhail-Ermakov_450_mobile.jpg 1x, ./images/Mikhail-Ermakov_450_mobile@2x.jpg 2x" media="(max-width: 767px)">
                     <img class="team-item__photo" src="./images/Mikhail-Ermakov_354_tablet.jpg" alt="Михаил Ермаков">
                 </picture>
                 
@@ -269,6 +304,7 @@
 
     <div data-modal class="backdrop backdrop--is-hidden">
         <div class="modal">
+            <button data-modal-close class="modal-btn"><svg width="18" height="18"><use href="images/icons.svg#close"></use></svg></button>
             <form class="modal-agreement">
                 <h2 class="modal-agreement__title">Оставьте свои данные, мы вам перезвоним</h2>
                 <ul class="modal-agreement__list">
@@ -300,12 +336,12 @@
                     <span class="follow-checkbox__img">
                     <svg width="16" height="15"><use href="./images/icons.svg#icon-check"></use></svg>
                     </span>
-                    Соглашаюсь с рассылкой и принимаю <a class="follow-checkbox__terms" href="#">Условия договора</a>
+                    <span>Соглашаюсь с рассылкой и принимаю &nbsp;<a class="follow-checkbox__terms" href="#">Условия договора</a></span>
                 </label>
                 </div>
                 <button class="modal-agreement__button" type="submit">Отправить</button>
             </form>
-            <button data-modal-close class="modal-btn"><svg width="18" height="18"><use href="images/icons.svg#close"></use></svg></button>
+            
         </div>
     </div>
     <script src="./js/modal.js"></script>
